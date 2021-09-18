@@ -14,9 +14,9 @@ function setup() {
 	
 	background(0)
 	
-	sequencer.addSequence( "bgColor", changeBgColor, 2 )
-	sequencer.addSequence( "text", changeText, 1 )
-	sequencer.addSequence( "textColor", changeTextColor, 1/2 )
+	sequencer.addSequence( changeBgColor, 2 )
+	sequencer.addSequence( changeText, 1 )
+	sequencer.addSequence( changeTextColor, 1/2 )
 	
 	
 }

@@ -42,15 +42,15 @@ const doSequence = sequence => {
 	
 }
 
-const addSequence = (name, action, time=1) => {
+const addSequence = (action, time=1) => {
 	
-	if( ! name ) {
-		console.warn( "Sequence must have a 'name' property")
+	if( typeof action !== "function" ) {
+		console.warn( "Sequencer must receive a function as 'action' parameter")
 		return
 	} 
 	
 	const sequence = {
-		name,
+		name: action.name,
 		action,
 		clock: {
 			time,
@@ -58,7 +58,7 @@ const addSequence = (name, action, time=1) => {
 		}
 	}
 	
-	sequences[ name ] = sequence
+	sequences[ action.name ] = sequence
 	
 }
 
