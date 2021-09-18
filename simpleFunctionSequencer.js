@@ -17,7 +17,7 @@ let clocks = {}
 let sequences = {}
 
 
-function checkTime( time, count ) {
+const checkTime = ( time, count ) => {
 	return ( millis() - count ) / 1000 > time
 }
 
